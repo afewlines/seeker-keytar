@@ -1,0 +1,193 @@
+#:kivy 1.0
+
+<Tile>:
+    bcolor: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<GameScreen>:
+    bcolor: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            # bcolor: 1,1,1,0
+            orientation: 'horizontal'
+            size_hint_y: 0.0625
+            Label:
+                color: 1.0, 1.0, 0.89, 1
+                id: time
+                text: '0:00'
+                font_size: dp(16)
+                text_size: 380, None
+                halign: 'left'
+            Label:
+                color: 1.0, 1.0, 0.89, 1
+                id: level
+                text: '20'
+                font_size: dp(16)
+                text_size: 380, None
+                halign: 'right'
+        GridLayout:
+            id: grid
+            rows: 4
+            cols: 4
+
+<TitleScreen>:
+    bcolor: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        pos_hint: {'center_y':0.5}
+        height: dp(90)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'keytar'
+            font_size: dp(26)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'by brad'
+            font_size: dp(13)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'press \'r\' or \'spacebar\' to start'
+            font_size: dp(16)
+            size_hint_y: None
+            height: dp(30)
+
+<WinScreen>:
+    bcolor: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        pos_hint: {'center_y':0.25}
+        height: dp(90)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'you win !'
+            font_size: dp(26)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            id: time
+            text: 'time: 0.00'
+            font_size: dp(13)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'press \'r\' or \'spacebar\' to start'
+            font_size: dp(16)
+            size_hint_y: None
+            height: dp(30)
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(180)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                text: '~ leaderboard ~'
+                font_size: dp(15)
+                size_hint_y: None
+                height: dp(40)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                id: l1
+                text: ''
+                font_size: dp(13)
+                size_hint_y: None
+                height: dp(18)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                id: l2
+                text: ''
+                font_size: dp(13)
+                size_hint_y: None
+                height: dp(18)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                id: l3
+                text: ''
+                font_size: dp(13)
+                size_hint_y: None
+                height: dp(18)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                id: l4
+                text: ''
+                font_size: dp(13)
+                size_hint_y: None
+                height: dp(18)
+            Label:
+                color: 0.35, 0.4, 0.43, 1
+                id: l5
+                text: ''
+                font_size: dp(13)
+                size_hint_y: None
+                height: dp(18)
+
+<LoseScreen>:
+    bcolor: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: self.bcolor
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        pos_hint: {'center_y':0.5}
+        height: dp(90)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'you lost :('
+            font_size: dp(26)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            id: time
+            text: 'time: 0'
+            font_size: dp(13)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            id: completed
+            text: 'level: 0'
+            font_size: dp(13)
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            color: 0.35, 0.4, 0.43, 1
+            text: 'press \'r\' or \'spacebar\' to start'
+            font_size: dp(16)
+            size_hint_y: None
+            height: dp(30)
